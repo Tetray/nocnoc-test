@@ -11,3 +11,90 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+@keyframes orbit-drift {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  10% {
+    stroke-dashoffset: -11.47;
+  }
+  20% {
+    stroke-dashoffset: -22.38;
+  }
+  30% {
+    stroke-dashoffset: -32.38;
+  }
+  40% {
+    stroke-dashoffset: -41.47;
+  }
+  50% {
+    stroke-dashoffset: -50;
+  }
+  60% {
+    stroke-dashoffset: -58.53;
+  }
+  70% {
+    stroke-dashoffset: -67.62;
+  }
+  80% {
+    stroke-dashoffset: -77.62;
+  }
+  90% {
+    stroke-dashoffset: -88.53;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes orbit-flow {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(41.29px, -32.12px);
+  }
+  20% {
+    transform: translate(80.56px, -62.66px);
+  }
+  30% {
+    transform: translate(116.56px, -90.66px);
+  }
+  40% {
+    transform: translate(149.29px, -116.12px);
+  }
+  50% {
+    transform: translate(180px, -140px);
+  }
+  60% {
+    transform: translate(210.71px, -163.88px);
+  }
+  70% {
+    transform: translate(243.44px, -189.34px);
+  }
+  80% {
+    transform: translate(279.44px, -217.34px);
+  }
+  90% {
+    transform: translate(318.71px, -247.88px);
+  }
+  100% {
+    transform: translate(360px, -280px);
+  }
+}
+
+.orbit-path {
+  animation: orbit-drift 34s linear infinite;
+}
+
+.orbit-flow-rect {
+  animation: orbit-flow 16s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-path,
+  .orbit-flow-rect {
+    animation: none;
+  }
+}

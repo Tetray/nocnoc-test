@@ -1,6 +1,11 @@
+import OrbitGlobe from "../components/OrbitGlobe";
+
 export default function Hero() {
   return (
-    <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-24 pt-20 sm:px-10 sm:pb-32 sm:pt-28">
+    <section className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-24 pt-20 sm:px-10 sm:pb-32 sm:pt-28">
+      <div className="pointer-events-none absolute left-[820px] top-1/2 hidden h-[220px] w-[220px] -translate-y-1/2 xl:block">
+        <OrbitGlobe />
+      </div>
       <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
         01 — Nocnoc
       </p>
